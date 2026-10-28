@@ -47,7 +47,7 @@ export const myAction = action({
 - ... Everything else you want to do with Mastra.
 
 Found a bug? Feature request?
-[File it here](https://github.com/get-convex/mastra/issues).
+[File it here](https://github.com/convex/mastra/issues).
 
 ### Future work
 

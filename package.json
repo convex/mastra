@@ -1,11 +1,11 @@
 {
   "name": "@convex-dev/mastra",
   "description": "A mastra component for Convex.",
-  "repository": "github:get-convex/mastra",
-  "homepage": "https://github.com/get-convex/mastra#readme",
+  "repository": "github:convex/mastra",
+  "homepage": "https://github.com/convex/mastra#readme",
   "bugs": {
     "email": "support@convex.dev",
-    "url": "https://github.com/get-convex/mastra/issues"
+    "url": "https://github.com/convex/mastra/issues"
   },
   "version": "0.0.1-alpha.8",
   "license": "Apache-2.0",
