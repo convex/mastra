@@ -31,5 +31,7 @@ npm trust github @convex-dev/mastra --repo convex/mastra --file release.yml --al
 ```
 
 Do not merge a stable version bump until the intended first stable version and
-changelog are reviewed. For recovery, dispatch **Release** with the exact
-version-bump commit SHA only after checking whether it is already staged.
+changelog are reviewed. If staging failed, dispatch **Release** with the exact
+version-bump commit SHA after checking that it is not staged. If staging
+succeeded but tagging failed, verify the staged package and rerun the failed
+`tag` job in the original workflow run.
