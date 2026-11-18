@@ -1,0 +1,29 @@
+name: Tag new version
+
+concurrency:
+  group: ${{ github.workflow }}
+  queue: max
+  cancel-in-progress: false
+
+on:
+  push:
+    branches: [main]
+
+permissions: {}
+
+jobs:
+  tag:
+    name: Tag a new version
+    if: github.repository_owner == 'convex' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write # create the version tag
+      actions: write # start Release on the new tag
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: convex/npm-release-actions/tag-version@6d8758603978f892ffbdcd1a170b8b0c121efefe # v0.2.0
